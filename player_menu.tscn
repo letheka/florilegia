@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5jcsnkox4taj"]
+
+[ext_resource type="Script" path="res://MoveButton.gd" id="1_hcujq"]
+
+[node name="PlayerMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="MoveButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Move"
+script = ExtResource("1_hcujq")
+
+[connection signal="pressed" from="MoveButton" to="MoveButton" method="_on_pressed"]
